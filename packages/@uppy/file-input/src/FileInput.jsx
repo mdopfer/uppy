@@ -31,6 +31,9 @@ export default  class FileInput extends UIPlugin {
     this.render = this.render.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleClick = this.handleClick.bind(this)
+
+    console.log("This is the file input");
+
   }
 
   addFiles (files) {
@@ -40,6 +43,8 @@ export default  class FileInput extends UIPlugin {
       type: file.type,
       data: file,
     }))
+
+    console.log("Add files");
 
     try {
       this.uppy.addFiles(descriptors)
